@@ -23,19 +23,16 @@
     var_dump($String);
     echo "<br>";
 
-
 //4- 
     echo "<br>"."Ejercicio 4:"."<br>";
 
     $Siono = true; $Nadena = null;
-
     var_dump($Siono);
     echo "<br>";
     var_dump($Nadena);
     echo "<br>";
 
 //5-
-
     echo "<br>"."Ejercicio 5:"."<br>";
 
     $Num1 = 2; $Num2 = 22;
@@ -81,14 +78,12 @@
     var_dump($Multiplicacionrara2);
     echo $Multiplicacionrara2."<br>";
 
-
     $VarString1="10 manzanas";
     $MultiplicacionStrings = $Variable1*$VarString1;
     var_dump($MultiplicacionStrings);
     echo $MultiplicacionStrings."<br>";
 
 //8
-
     echo "<br>"."Ejercicio 8:"."<br>";
 
     $Boolean1=true;
