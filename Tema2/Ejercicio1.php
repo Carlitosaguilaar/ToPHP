@@ -14,7 +14,7 @@
 
     $Int = 0;
     $Float = 0.5 ;
-    $String = "Robertonto";
+    $String = "Hola";
 
     var_dump($Int);
     echo "<br>";
@@ -41,23 +41,23 @@
     $Num1 = 2; $Num2 = 22;
 
     $Suma = $Num1+$Num2;
-    echo $Suma."<br>";
+    echo "El resultado de la suma es: ".$Suma."<br>";
 
     $Resta = $Num1-$Num2;
-    echo $Resta."<br>";
+    echo "El resultado de la resta es: ".$Resta."<br>";
 
     $Multi = $Num1*$Num2;
-    echo $Multi."<br>";
+    echo "El resultado de la multiplicación es: ".$Multi."<br>";
 
     $Divi = $Num1/$Num2;
-    echo $Divi."<br>";
+    echo "El resultado de la división es: ".$Divi."<br>";
 
     $Resto = $Num1&$Num2;
-    echo $Resto."<br>";
+    echo "El resto de la división es: ".$Resto."<br>";
 
     $Potencia = pow($Num1, $Num2);
 
-    echo $Potencia."<br>";
+    echo "El resultado de la potencia es: ".$Potencia."<br>";
 
 //6- 
     echo "<br>"."Ejercicio 6:"."<br>";
@@ -98,5 +98,8 @@
     echo $OchoA."<br>";
     $OchoB = $Boolean1||$Boolean2; 
     echo $OchoB."<br>";
+    echo $OchoA xor $OchoB."<br>";
+    echo "<br>".!$OchoA;
+
     
 ?>
