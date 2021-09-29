@@ -1,4 +1,4 @@
-<pre>
+<pre>     <!-- La etiqueta pre sirve para mostrar los matrices en una estructura mejor, visualmente hablando -->      
 <?php
 
 $MatrizMatriculas =array(
@@ -20,7 +20,6 @@ $MatrizMatriculas =array(
 );
 
     print_r ($MatrizMatriculas);
-
 
 ?>
 
