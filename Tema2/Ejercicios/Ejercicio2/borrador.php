@@ -2,10 +2,8 @@
  
     $ent1 = $_GET['entrada1'];
     $ent1=strtoupper($ent1);
-    /*$ent2 = $_GET['entrada2'];
+    $ent2 = $_GET['entrada2'];
     $ent3 = $_GET['entrada3'];
- */
-
 
     echo "Ejercicio 1. ";
 
@@ -92,7 +90,26 @@
     echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 5. ";
 
 
-
+    switch ($ent2) {
+        case v1:
+            $Suma = ($ent1 + $ent3);
+            echo $Suma;
+            break;
+        case v2:
+            $Resta = ($ent1 - $ent3);
+            echo $Resta;
+            break;
+        case v3:
+            $Multip = ($ent1 * $ent3);
+            echo $Multip;
+            break;
+        case v4:
+            $Division = ($ent1 / $ent3);
+            echo $Division;
+            break;
+        default:
+        echo "No se puede resolver esta operación";
+            break;
 
 
 
@@ -112,15 +129,8 @@
 
   /*
 
-Ejercicio 4.- 
 
-Repite el ejercicio anterior usando switch.
 
-NOTA: Intenta hacerlo en el menor número de líneas posibles
-
-Ejercicio 5.-
-
-Haz una calculadora con dos operandos y las operaciones +, -, *, /.
 
 Ejercicio 6.- 
 
