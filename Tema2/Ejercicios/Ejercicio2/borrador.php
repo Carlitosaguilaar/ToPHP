@@ -1,14 +1,15 @@
 <?php
  
     $ent1 = $_GET['entrada1'];
-    $ent1=strtoupper($ent1);
+    $ent1=strtoupper($ent1);           //No importa si intercala mayus y minus, 
     $ent2 = $_GET['entrada2'];
     $ent3 = $_GET['entrada3'];
+    $ent3=strtoupper($ent3);
 
     echo "Ejercicio 1. ";
 
-    if ($ent1=="TRUE") {
-        echo "verdadero";
+    if ($ent1=="TRUE") {        
+        echo "verdadero";       //Devuelve verdadero si se introduce TRUE
     } 
     else if ($ent1=="FALSE") {
         echo "falso";
@@ -34,7 +35,7 @@
         }
     
         else if ($ent1 <25){
-            echo "El número es menor de 25";
+            echo "El número es menor de 25";        
         }
         
     } else {
@@ -43,7 +44,6 @@
     }
 
     echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 3. ";
-
     
     if (is_string($ent1)) {
         
@@ -85,63 +85,67 @@
             break;
     }
 
-
-
     echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 5. ";
 
-
     switch ($ent2) {
-        case v1:
+        case "+":
             $Suma = ($ent1 + $ent3);
             echo $Suma;
             break;
-        case v2:
+        case "-":
             $Resta = ($ent1 - $ent3);
             echo $Resta;
             break;
-        case v3:
+        case "*":
             $Multip = ($ent1 * $ent3);
             echo $Multip;
             break;
-        case v4:
+        case "/":
             $Division = ($ent1 / $ent3);
             echo $Division;
             break;
         default:
         echo "No se puede resolver esta operación";
             break;
-
-
+    }
 
     echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 6. ";
 
+    if (($ent1==TRUE&&$ent3==TRUE)||($ent1==FALSE&&$ent3==FALSE)) {
+        echo "Si";
+    }
+    else{
+        echo "No";
+    }
+    echo "<br>";
 
+    if ($ent1==TRUE||$ent3==TRUE){
+        echo "Si";
+    }
+    else{
+        echo "No";
+    }
+    echo "<br>";
 
+    if (($ent1==TRUE&&$ent3==TRUE)||($ent1==false&&$ent3==false)) {
+        echo "No";
+    }
+    else{
+        echo "Si";
+    }
 
+    if (!$ent1==TRUE){
+        echo "No"."<br>";
+    }
+    else {
+        echo "Si"."<br>";
 
+    }
+    if (!$ent3==TRUE){
+        echo "No"."<br>";
+    }
+    else {
+        echo "Si"."<br>";
+    }
 
-
-    echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 7. ";
-
-
-
-
-
-  /*
-
-
-
-
-Ejercicio 6.- 
-
-Recibe 2 valores boolean y una operación lógica
-
-and
-or
-xor
-niega una de ellas
-
-Sobre ellas realiza las siguientes operaciones lógicas mostrando por pantalla el resultado:
-
-*/
 ?>
