@@ -1,22 +1,45 @@
+<pre>
 <?php
  
     $ent1 = $_GET['entrada1'];
-    $ent1=strtoupper($ent1);           //No importa si intercala mayus y minus, 
     $ent2 = $_GET['entrada2'];
     $ent3 = $_GET['entrada3'];
-    $ent3=strtoupper($ent3);
-
+/*
     echo "Ejercicio 1. ";
 
-    if ($ent1=="TRUE") {        
-        echo "verdadero";       //Devuelve verdadero si se introduce TRUE
+    if (strtolower($ent1)=="true") {        
+        echo "verdadero";       //Devuelve verdadero si se introduce=true
     } 
-    else if ($ent1=="FALSE") {
+    else if (strtolower($ent1)=="false") {  //Devuelve falso si se introduce false
         echo "falso";
     } 
     else {
         echo "Introduce un booleano de verdad, payaso";
     }
+
+    //Otra forma
+
+    function str_to_bool($ent) {
+        $Bool = Array(
+            "true" => true,
+            "false" => false
+        );
+    
+ 
+        return $Bool[$ent];
+ 
+    }
+        
+    function str_to_bool2($ent) {
+ 
+        return Array(
+                    "true" => true,
+                    "false" => false
+                )[$ent];
+ 
+    }
+ 
+    $b = str_to_bool($ent2);
     
     echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 2. ";
 
@@ -47,15 +70,15 @@
     
     if (is_string($ent1)) {
         
-        if ($ent1 == "GATO") {
+        if (strtolower($ent1) == "gato") {
             echo "Se ha seleccionado el gato";
         }
         
-        else if ($ent1 == "PERRO") {
+        else if (strtolower($ent1) == "perro") {
             echo "Se ha seleccionado el perro";
         }
     
-        else if ($ent1 == "LORO") {
+        else if (strtolower($ent1) == "loro") {
             echo "Se ha seleccionado el loro";
         }
     
@@ -70,20 +93,33 @@
 
     echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 4. ";
 
-    switch ($ent1) {
-        case "GATO":
+    switch (strtolower($ent1)) {
+        case "gato":
             echo "Se ha seleccionado el gato";
             break;
-        case "PERRO":
+        case "gato":
             echo "Se ha seleccionado el perro";
             break;
-        case "LORO":
+        case "loro":
             echo "Se ha seleccionado el loro";
             break;
         default:
         echo "No se ha seleccionado ni perro, ni gato, ni loro";
             break;
     }
+
+//Otra forma
+
+    switch (strtolower($ent1)){
+ 
+        case 'gato' : 
+        case 'perro' : 
+        case 'loro' : 
+            echo 'Se ha seleccionado el '.$ent1; 
+            break;
+        default: echo 'No se ha seleccionado ni perro, ni gato, ni loro';
+    }
+    
 
     echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 5. ";
 
@@ -111,7 +147,16 @@
 
     echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 6. ";
 
-    if (($ent1==TRUE&&$ent3==TRUE)||($ent1==FALSE&&$ent3==FALSE)) {
+    if ((strtolower($ent1)==true&&strtolower($ent3)==true)||(strtolower($ent1)==false&&strtolower($ent3)==false)) {
+        echo "Si";
+    }
+    else{
+        
+        echo "No";
+    }
+    echo "<br>";
+
+    if (strtolower($ent1)==true||strtolower($ent3)==true){
         echo "Si";
     }
     else{
@@ -119,33 +164,33 @@
     }
     echo "<br>";
 
-    if ($ent1==TRUE||$ent3==TRUE){
-        echo "Si";
-    }
-    else{
-        echo "No";
-    }
-    echo "<br>";
-
-    if (($ent1==TRUE&&$ent3==TRUE)||($ent1==false&&$ent3==false)) {
+    if ((strtolower($ent1)==true&&strtolower($ent3)==true)||(strtolower($ent1)==false&&strtolower($ent3)==false)) {
         echo "No";
     }
     else{
         echo "Si";
     }
 
-    if (!$ent1==TRUE){
+    if (!strtolower($ent1)==true){
         echo "No"."<br>";
     }
     else {
         echo "Si"."<br>";
 
     }
-    if (!$ent3==TRUE){
+    if (!strtolower($ent3)==true){
         echo "No"."<br>";
     }
     else {
         echo "Si"."<br>";
     }
+*/
+    echo "<br>". "<br>". "<br>". "<br>"."Ejercicio 7. ";
+
+    $frase = explode(" ", $ent1);
+
+    var_dump($frase);
 
 ?>
+
+</pre>
